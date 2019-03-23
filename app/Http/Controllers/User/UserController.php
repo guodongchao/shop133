@@ -67,8 +67,10 @@ class UserController extends Controller
             setcookie('xnn_token',$token,time()+86400,'/','qianqianya.xyz',false,true);
             //var_dump($_COOKIE);
             $redis_key="h:u:s".$info->uid;
-            Redis::set($redis_key,$token);
-            Redis::expire($redis_key,86400);
+           // Redis::set($redis_key,$token);
+          //  Redis::expire($redis_key,86400);
+            Redis::del($redis_key);
+            Redis::hSet($redis_key,'web',$token);
             //echo '1';
             $response = [
 
@@ -178,8 +180,10 @@ class UserController extends Controller
             $token = Redis::get($key);
             if(empty($token)){
                 $token = substr(md5(time() + $uid + rand(1000,9999)),10,20);
-                Redis::set($key,$token);
-                Redis::setTimeout($key,60*60*24*7);
+              //  Redis::set($key,$token);
+             //   Redis::setTimeout($key,60*60*24*7);
+                Redis::del($key);
+                Redis::hSet($key,'web',$token);
                 //  var_dump($token);exit;
             }
             setcookie('xnn_uid',$uid,time()+86400,'/','qianqianya.xyz',false,true);
@@ -380,7 +384,7 @@ class UserController extends Controller
 
             $uid = $userInfo->uid;
 
-            $key = 'api:token:' . $uid;
+            $key = 'token:' . $uid;
 
             $token = Redis::get($key);
 
@@ -388,9 +392,11 @@ class UserController extends Controller
 
                 $token = substr(md5(time() + $uid + rand(1000,9999)),10,20);
 
-                Redis::set($key,$token);
+           //     Redis::set($key,$token);
 
-                Redis::setTimeout($key,60*60*24*7);
+            //    Redis::setTimeout($key,60*60*24*7);
+                Redis::del($key);
+                Redis::hSet($key,'app',$token);
 
             }
 
