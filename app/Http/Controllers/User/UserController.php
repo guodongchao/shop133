@@ -19,6 +19,85 @@ class UserController extends Controller
 
 {
 
+
+    //手机端登录页面
+    public function alogin(){
+        $recurl=$_GET["recurl"] ?? env("SHOP_URL");
+
+        $info=[
+            "redirect"=>$recurl
+        ];
+        return view("test.login",$info);
+    }
+
+
+
+    public function apilogins(Request $request){
+        $name =$request->input('u_name');
+        $pwd=$request->input('u_pwd');
+        $recur=$request->input('recurl') ?? env('SHOP_URL');
+        $recurl=urldecode($recur);
+        $data=[
+            'name'=>$name
+        ];
+        $info=UserModel::where($data)->first();
+
+        $pwd2=password_verify($pwd,$info->pass);
+
+        if(empty($info)){
+            $response = [
+                'errno' =>  40001,
+                'msg'   =>  '用户名不存在'
+
+            ];
+            return $response;
+        }else if($pwd2===false){
+            $response = [
+
+                'errno' =>  40002,
+
+                'msg'   =>  '密码错误'
+
+            ];
+
+            return $response;
+        }else {
+            $token = substr(md5(time().mt_rand(1,99999)),10,10);
+            setcookie('xnn_uid',$info->id,time()+86400,'/','lara.com',false,true);
+            setcookie('xnn_token',$token,time()+86400,'/','lara.com',false,true);
+            //var_dump($_COOKIE);
+            $redis_key="h:u:s".$info->id;
+            Redis::set($redis_key,$token);
+            Redis::expire($redis_key,86400);
+            //echo '1';
+            $response = [
+
+                'errno' =>  0,
+
+                'msg'   =>  '登录成功'
+
+            ];
+
+            return $response;
+            header("refresh:1;$recurl");
+        }
+    }
+
+
+
+
+
+
+    /**
+    *退出
+     */
+    public function quit(){
+        setcookie('xnn_uid','',time()-3600,'/','lara.com',false,true);
+        setcookie('xnn_token','',time()-3600,'/','lara.com',false,true);
+        header("refresh:0;url='http://shop.lara.com/'");
+        //header("refresh:2,url=".$data['url']);
+
+    }
     //
 
     /**
@@ -67,7 +146,7 @@ class UserController extends Controller
         $name = $request->input('u_name');
 
         $password = $request->input('u_pwd');
-
+        //echo $password;exit;
         //$redirect = urldecode($request->input('redirect')) ?? env('SHOP_URL');
 
         $where=[
@@ -92,7 +171,7 @@ class UserController extends Controller
 
         }
 
-        $pas = $userInfo->password;
+        $pas = $userInfo->pass;
         if(password_verify($password,$pas)){
             $uid = $userInfo->uid;
             $key = 'token:' . $uid;
@@ -103,8 +182,8 @@ class UserController extends Controller
                 Redis::setTimeout($key,60*60*24*7);
                 //  var_dump($token);exit;
             }
-            setcookie('xnn_uid',$uid,time()+86400,'/','wechat.com',false,true);
-            setcookie('xnn_token',$token,time()+86400,'/','wechat.com',false,true);
+            setcookie('xnn_uid',$uid,time()+86400,'/','lara.com',false,true);
+            setcookie('xnn_token',$token,time()+86400,'/','lara.com',false,true);
             $request->session()->put('xnn_u_token',$token);
             $request->session()->put('xnn_uid',$uid);
             $response = [
@@ -277,9 +356,6 @@ class UserController extends Controller
         return $response;
 
     }
-
-
-
     public function apiLogin(Request $request)
 
     {
@@ -355,5 +431,8 @@ class UserController extends Controller
         return $response;
 
     }
+
+
+
 
 }

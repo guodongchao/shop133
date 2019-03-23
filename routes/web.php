@@ -23,8 +23,19 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/userlogin', 'User\UserController@loginView');
-Route::post('/userlogin', 'User\UserController@loginAction');
+Route::get('/userlogin', 'User\UserController@loginView');//访问登录页面
+Route::post('/userlogin', 'User\UserController@loginAction');//登录页面
+
+
+Route::get('/resistr', 'User\UserController@registerView');//访问注册
+Route::post('/register', 'User\UserController@registerAction');//注册页面
+Route::get('/quit', 'User\UserController@quit');//退出（清除cookie），
+
+
+
+Route::get('/apilogin','User\UserController@alogin'); //访问登录页面
+Route::post('/apilogin','User\UserController@apilogins'); //登录页面
+
 
 
 
