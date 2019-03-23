@@ -63,10 +63,10 @@ class UserController extends Controller
             return $response;
         }else {
             $token = substr(md5(time().mt_rand(1,99999)),10,10);
-            setcookie('xnn_uid',$info->id,time()+86400,'/','lara.com',false,true);
-            setcookie('xnn_token',$token,time()+86400,'/','lara.com',false,true);
+            setcookie('xnn_uid',$info->uid,time()+86400,'/','qianqianya.xyz',false,true);
+            setcookie('xnn_token',$token,time()+86400,'/','qianqianya.xyz',false,true);
             //var_dump($_COOKIE);
-            $redis_key="h:u:s".$info->id;
+            $redis_key="h:u:s".$info->uid;
             Redis::set($redis_key,$token);
             Redis::expire($redis_key,86400);
             //echo '1';
@@ -92,8 +92,8 @@ class UserController extends Controller
     *退出
      */
     public function quit(){
-        setcookie('xnn_uid','',time()-3600,'/','lara.com',false,true);
-        setcookie('xnn_token','',time()-3600,'/','lara.com',false,true);
+        setcookie('xnn_uid',null,time()-3600,'/','qianqianya.xyz',false,true);
+        setcookie('xnn_token',null,time()-3600,'/','qianqianya.xyz',false,true);
         header("refresh:0;url='https://gdc.qianqianya.xyz/'");
         //header("refresh:2,url=".$data['url']);
 
