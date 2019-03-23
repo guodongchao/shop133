@@ -461,25 +461,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
+            <state relative-caret-position="513">
               <caret line="36" column="64" lean-forward="true" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/User/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="398" column="37" selection-start-line="398" selection-start-column="37" selection-end-line="398" selection-end-column="37" />
+            <state relative-caret-position="297">
+              <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
               <folding>
                 <element signature="e#49#73#0#PHP" expanded="true" />
                 <element signature="e#493#808#0#PHP" />
+                <element signature="e#2620#4223#0#PHP" />
                 <element signature="e#2752#3069#0#PHP" />
                 <element signature="e#3077#4728#0#PHP" />
+                <element signature="e#6413#7598#0#PHP" />
               </folding>
             </state>
           </provider>
@@ -779,12 +781,12 @@
       <workItem from="1553149841654" duration="5533000" />
       <workItem from="1553168965109" duration="4165000" />
       <workItem from="1553226222106" duration="3645000" />
-      <workItem from="1553243308180" duration="17554000" />
+      <workItem from="1553243308180" duration="18148000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33459000" />
+    <option name="totallyTimeSpent" value="34053000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -822,7 +824,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/User/UserController.php</url>
-          <line>95</line>
+          <line>107</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -844,8 +846,10 @@
           <folding>
             <element signature="e#49#73#0#PHP" expanded="true" />
             <element signature="e#493#808#0#PHP" />
+            <element signature="e#2620#4223#0#PHP" />
             <element signature="e#2752#3069#0#PHP" />
             <element signature="e#3077#4728#0#PHP" />
+            <element signature="e#6413#7598#0#PHP" />
           </folding>
         </state>
       </provider>
@@ -912,8 +916,10 @@
           <folding>
             <element signature="e#49#73#0#PHP" expanded="true" />
             <element signature="e#493#808#0#PHP" />
+            <element signature="e#2620#4223#0#PHP" />
             <element signature="e#2752#3069#0#PHP" />
             <element signature="e#3077#4728#0#PHP" />
+            <element signature="e#6413#7598#0#PHP" />
           </folding>
         </state>
       </provider>
@@ -1132,19 +1138,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/User/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="398" column="37" selection-start-line="398" selection-start-column="37" selection-end-line="398" selection-end-column="37" />
-          <folding>
-            <element signature="e#49#73#0#PHP" expanded="true" />
-            <element signature="e#493#808#0#PHP" />
-            <element signature="e#2752#3069#0#PHP" />
-            <element signature="e#3077#4728#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -1168,8 +1161,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
+        <state relative-caret-position="513">
           <caret line="36" column="64" lean-forward="true" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/User/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+          <folding>
+            <element signature="e#49#73#0#PHP" expanded="true" />
+            <element signature="e#493#808#0#PHP" />
+            <element signature="e#2620#4223#0#PHP" />
+            <element signature="e#2752#3069#0#PHP" />
+            <element signature="e#3077#4728#0#PHP" />
+            <element signature="e#6413#7598#0#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -31,60 +31,72 @@ class UserController extends Controller
     }
 
 
+    /**
+    *移动端登录处理页面
+     */
+    public function apilogins(Request $request)
 
-    public function apilogins(Request $request){
-        $name =$request->input('u_name');
-        $pwd=$request->input('u_pwd');
-        $recur=$request->input('recurl') ?? env('SHOP_URL');
-        $recurl=urldecode($recur);
-        $data=[
+    {
+
+        $name = $request->input('u_name');
+
+        $password = $request->input('u_pwd');
+        //echo $password;exit;
+        //$redirect = urldecode($request->input('redirect')) ?? env('SHOP_URL');
+
+        $where=[
+
             'name'=>$name
+
         ];
-        $info=UserModel::where($data)->first();
 
-        $pwd2=password_verify($pwd,$info->pass);
+        $userInfo=UserModel::where($where)->first();
 
-        if(empty($info)){
+        if(empty($userInfo)){
+
             $response = [
+
                 'errno' =>  40001,
+
                 'msg'   =>  '用户名不存在'
 
             ];
-            return $response;
-        }else if($pwd2===false){
-            $response = [
-
-                'errno' =>  40002,
-
-                'msg'   =>  '密码错误'
-
-            ];
 
             return $response;
-        }else {
-            $token = substr(md5(time().mt_rand(1,99999)),10,10);
-            setcookie('xnn_uid',$info->uid,time()+86400,'/','qianqianya.xyz',false,true);
-            setcookie('xnn_token',$token,time()+86400,'/','qianqianya.xyz',false,true);
-            //var_dump($_COOKIE);
-            $redis_key="h:u:s".$info->uid;
-           // Redis::set($redis_key,$token);
-          //  Redis::expire($redis_key,86400);
-            Redis::del($redis_key);
-            Redis::hSet($redis_key,'web',$token);
-            //echo '1';
-            $response = [
 
-                'errno' =>  0,
-
-                'msg'   =>  '登录成功'
-
-            ];
-
-            return $response;
-            header("refresh:1;$recurl");
         }
-    }
 
+        $pas = $userInfo->pass;
+        if(password_verify($password,$pas)){
+            $uid = $userInfo->uid;
+            $key = 'token:' . $uid;
+            $token = Redis::get($key);
+            if(empty($token)){
+                $token = substr(md5(time() + $uid + rand(1000,9999)),10,20);
+                //  Redis::set($key,$token);
+                //   Redis::setTimeout($key,60*60*24*7);
+                Redis::del($key);
+                Redis::hSet($key,'web',$token);
+                //  var_dump($token);exit;
+            }
+            setcookie('xnn_uid',$uid,time()+86400,'/','qianqianya.xyz',false,true);
+            setcookie('xnn_token',$token,time()+86400,'/','qianqianya.xyz',false,true);
+            $request->session()->put('xnn_u_token',$token);
+            $request->session()->put('xnn_uid',$uid);
+            $response = [
+                'errno' =>  0,
+                'msg'   =>  '登陆成功',
+            ];
+        }else{
+            $response = [
+                'errno' =>  40002,
+                'msg'   =>  '登录失败'
+            ];
+        }
+        //   print_r($response);exit;
+        return $response;
+
+    }
 
 
 
@@ -137,7 +149,7 @@ class UserController extends Controller
 
      * @return array
 
-     * 登陆处理请求
+     * pc登陆处理请求
 
      */
 
