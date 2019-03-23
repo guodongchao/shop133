@@ -94,7 +94,7 @@ class UserController extends Controller
     public function quit(){
         setcookie('xnn_uid','',time()-3600,'/','lara.com',false,true);
         setcookie('xnn_token','',time()-3600,'/','lara.com',false,true);
-        header("refresh:0;url='http://shop.lara.com/'");
+        header("refresh:0;url='https://gdc.qianqianya.xyz/'");
         //header("refresh:2,url=".$data['url']);
 
     }

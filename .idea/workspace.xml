@@ -482,12 +482,11 @@
       <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/User/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="186" column="59" lean-forward="true" selection-start-line="186" selection-start-column="59" selection-end-line="186" selection-end-column="59" />
+            <state relative-caret-position="495">
+              <caret line="96" column="62" lean-forward="true" selection-start-line="96" selection-start-column="62" selection-end-line="96" selection-end-column="62" />
               <folding>
                 <element signature="e#49#73#0#PHP" expanded="true" />
                 <element signature="e#432#1442#0#PHP" />
-                <element signature="e#231#376#0#PHP" />
                 <element signature="e#493#808#0#PHP" />
                 <element signature="e#2752#3069#0#PHP" />
                 <element signature="e#3077#4728#0#PHP" />
@@ -799,12 +798,12 @@
       <workItem from="1553149841654" duration="5533000" />
       <workItem from="1553168965109" duration="4165000" />
       <workItem from="1553226222106" duration="3645000" />
-      <workItem from="1553243308180" duration="15665000" />
+      <workItem from="1553243308180" duration="15977000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31570000" />
+    <option name="totallyTimeSpent" value="31882000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -839,7 +838,14 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/User/UserController.php</url>
+          <line>93</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -857,7 +863,6 @@
           <folding>
             <element signature="e#49#73#0#PHP" expanded="true" />
             <element signature="e#432#1442#0#PHP" />
-            <element signature="e#231#376#0#PHP" />
             <element signature="e#493#808#0#PHP" />
             <element signature="e#2752#3069#0#PHP" />
             <element signature="e#3077#4728#0#PHP" />
@@ -927,7 +932,6 @@
           <folding>
             <element signature="e#49#73#0#PHP" expanded="true" />
             <element signature="e#432#1442#0#PHP" />
-            <element signature="e#231#376#0#PHP" />
             <element signature="e#493#808#0#PHP" />
             <element signature="e#2752#3069#0#PHP" />
             <element signature="e#3077#4728#0#PHP" />
@@ -1179,12 +1183,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/User/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="186" column="59" lean-forward="true" selection-start-line="186" selection-start-column="59" selection-end-line="186" selection-end-column="59" />
+        <state relative-caret-position="495">
+          <caret line="96" column="62" lean-forward="true" selection-start-line="96" selection-start-column="62" selection-end-line="96" selection-end-column="62" />
           <folding>
             <element signature="e#49#73#0#PHP" expanded="true" />
             <element signature="e#432#1442#0#PHP" />
-            <element signature="e#231#376#0#PHP" />
             <element signature="e#493#808#0#PHP" />
             <element signature="e#2752#3069#0#PHP" />
             <element signature="e#3077#4728#0#PHP" />
