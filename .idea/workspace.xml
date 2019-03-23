@@ -461,11 +461,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="26" column="67" lean-forward="true" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
+            <state relative-caret-position="513">
+              <caret line="36" column="22" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -482,10 +482,11 @@
       <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/User/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="51" column="14" lean-forward="true" selection-start-line="47" selection-start-column="12" selection-end-line="51" selection-end-column="14" />
+            <state relative-caret-position="196">
+              <caret line="173" column="30" selection-start-line="173" selection-start-column="26" selection-end-line="173" selection-end-column="30" />
               <folding>
                 <element signature="e#49#73#0#PHP" expanded="true" />
+                <element signature="e#432#1442#0#PHP" />
                 <element signature="e#2752#3069#0#PHP" />
                 <element signature="e#3077#4728#0#PHP" />
                 <element signature="e#6123#7308#0#PHP" />
@@ -503,11 +504,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VerifyCsrfToken.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="VerifyCsrfToken.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+            <state relative-caret-position="456">
+              <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -562,6 +563,7 @@
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" />
         <option value="$PROJECT_DIR$/resources/views/test/login.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
       </list>
     </option>
   </component>
@@ -796,12 +798,12 @@
       <workItem from="1553149841654" duration="5533000" />
       <workItem from="1553168965109" duration="4165000" />
       <workItem from="1553226222106" duration="3645000" />
-      <workItem from="1553243308180" duration="11527000" />
+      <workItem from="1553243308180" duration="12011000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27432000" />
+    <option name="totallyTimeSpent" value="27916000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -853,6 +855,7 @@
           <caret line="230" column="48" lean-forward="true" selection-start-line="230" selection-start-column="48" selection-end-line="230" selection-end-column="48" />
           <folding>
             <element signature="e#49#73#0#PHP" expanded="true" />
+            <element signature="e#432#1442#0#PHP" />
             <element signature="e#2752#3069#0#PHP" />
             <element signature="e#3077#4728#0#PHP" />
             <element signature="e#6123#7308#0#PHP" />
@@ -921,6 +924,7 @@
           <caret line="66" column="42" selection-start-line="66" selection-start-column="42" selection-end-line="66" selection-end-column="42" />
           <folding>
             <element signature="e#49#73#0#PHP" expanded="true" />
+            <element signature="e#432#1442#0#PHP" />
             <element signature="e#2752#3069#0#PHP" />
             <element signature="e#3077#4728#0#PHP" />
             <element signature="e#6123#7308#0#PHP" />
@@ -1132,13 +1136,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/test/reg.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -1165,10 +1162,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/User/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="51" column="14" lean-forward="true" selection-start-line="47" selection-start-column="12" selection-end-line="51" selection-end-column="14" />
+        <state relative-caret-position="196">
+          <caret line="173" column="30" selection-start-line="173" selection-start-column="26" selection-end-line="173" selection-end-column="30" />
           <folding>
             <element signature="e#49#73#0#PHP" expanded="true" />
+            <element signature="e#432#1442#0#PHP" />
             <element signature="e#2752#3069#0#PHP" />
             <element signature="e#3077#4728#0#PHP" />
             <element signature="e#6123#7308#0#PHP" />
@@ -1178,8 +1176,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="26" column="67" lean-forward="true" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
+        <state relative-caret-position="513">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
         </state>
       </provider>
     </entry>
