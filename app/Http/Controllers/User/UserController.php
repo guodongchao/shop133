@@ -182,8 +182,8 @@ class UserController extends Controller
                 Redis::setTimeout($key,60*60*24*7);
                 //  var_dump($token);exit;
             }
-            setcookie('xnn_uid',$uid,time()+86400,'/','lara.com',false,true);
-            setcookie('xnn_token',$token,time()+86400,'/','lara.com',false,true);
+            setcookie('xnn_uid',$uid,time()+86400,'/','qianqianya.xyz',false,true);
+            setcookie('xnn_token',$token,time()+86400,'/','qianqianya.xyz',false,true);
             $request->session()->put('xnn_u_token',$token);
             $request->session()->put('xnn_uid',$uid);
             $response = [
@@ -200,18 +200,6 @@ class UserController extends Controller
         return $response;
 
     }
-
-
-
-    public function webLogin()
-
-    {
-
-
-
-    }
-
-
 
     /**
 
