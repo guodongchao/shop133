@@ -97,11 +97,6 @@ class UserController extends Controller
         return $response;
 
     }
-
-
-
-
-
     /**
     *退出
      */
@@ -110,16 +105,11 @@ class UserController extends Controller
         setcookie('xnn_token',null,time()-3600,'/','qianqianya.xyz',false,true);
         header("refresh:0;url='https://gdc.qianqianya.xyz/'");
         //header("refresh:2,url=".$data['url']);
-
     }
     //
-
     /**
-
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-
      * 登陆页面
-
      */
 
     public function loginView(Request $request)
@@ -329,9 +319,8 @@ class UserController extends Controller
 
             Redis::setTimeout($key,60*60*24*7);
 
-            setcookie('xnn_uid',$uid,time()+86400,'/','lara.com',false,true);
-
-            setcookie('xnn_token',$token,time()+86400,'/','lara.com',false,true);
+            setcookie('xnn_uid',$uid,time()+86400,'/','qianqianya.xyz',false,true);
+            setcookie('xnn_token',$token,time()+86400,'/','qianqianya.xyz',false,true);
 
             $request->session()->put('xnn_u_token',$token);
 
@@ -360,6 +349,9 @@ class UserController extends Controller
         return $response;
 
     }
+    /**
+    *登录
+     */
     public function apiLogin(Request $request)
 
     {
