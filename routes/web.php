@@ -36,7 +36,8 @@ Route::get('/quit', 'User\UserController@quit');//退出（清除cookie），
 Route::get('/apilogin','User\UserController@alogin'); //访问登录页面
 Route::post('/apilogin','User\UserController@apilogins'); //登录页面
 
-
+//=========================================================================================================
+Route::post('/aa', 'Weixin\UserController@aa');//登录页面
 
 
 
