@@ -8,12 +8,13 @@ class UserController extends Controller
 {
     public function dome(){
         $data=[
-         'images/1.png',
-         'images/2.png',
-         'images/3.png',
+         '/images/1.png',
+         '/images/2.png',
+         '/images/3.png',
         ];
        $info=[
-           'data'=>$data
+           'data'=>$data,
+
        ];
         return $info;
     }
