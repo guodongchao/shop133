@@ -14,10 +14,9 @@ class UserController extends Controller
          * 轮播图
          */
         $data=[
-         '../../images/desk_publish@2x.png',
-         '../../images/desk_bid@2x.png',
-         '../../images/desk_order@2x.png',
-         '../../images/desk_massage@2x.png'
+         '../../images/1.png',
+         '../../images/2.png',
+         '../../images/3.png'
         ];
         /*
          * 工作台
@@ -123,8 +122,62 @@ class UserController extends Controller
                 "content"=>"马自达"
             ],
         ];
+        $arr=[
+            [
+                'alpha'=>'b',
+                'list'=>[
+                    [
+                        'name'=>"保时捷",
+                        'images_src'=>"../../images/timg.jpg"
+                    ],
+                    [
+                        'name'=>"奔驰",
+                        'images_src'=>"../../images/r.jpg"
+                    ],
+                    [
+                        'name'=>"别克",
+                        'images_src'=>"../../images/bk.jpg"
+                    ]
+                ]
+            ],
+            [
+                'alpha'=>'c',
+                'list'=>[
+                    [
+                        'name'=>"保时捷",
+                        'images_src'=>"../../images/timg.jpg"
+                    ],
+                    [
+                        'name'=>"奔驰",
+                        'images_src'=>"../../images/r.jpg"
+                    ],
+                    [
+                        'name'=>"别克",
+                        'images_src'=>"../../images/bk.jpg"
+                    ]
+                ]
+            ],
+            [
+                'alpha'=>'g',
+                'list'=>[
+                    [
+                        'name'=>"保时捷",
+                        'images_src'=>"../../images/timg.jpg"
+                    ],
+                    [
+                        'name'=>"奔驰",
+                        'images_src'=>"../../images/r.jpg"
+                    ],
+                    [
+                        'name'=>"别克",
+                        'images_src'=>"../../images/bk.jpg"
+                    ]
+                ]
+            ]
+        ];
         $info=[
-            'data'=>$data
+            'data'=>$data,
+            'arr' =>$arr
         ];
         return $info;
     }
