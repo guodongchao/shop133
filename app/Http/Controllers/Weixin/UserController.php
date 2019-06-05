@@ -7,11 +7,17 @@ use Illuminate\Support\Facades\Redis;
 class UserController extends Controller
 {
     public function dome(){
+        /*
+         * 轮播图
+         */
         $data=[
-         '/images/1.png',
-         '/images/2.png',
-         '/images/3.png',
+         '../../images/1.png',
+         '../../images/2.png',
+         '../../images/3.png',
         ];
+        /*
+         * 工作台
+         */
         $arr=[
             [
                 "url"=>"/pages/logs/logs",
@@ -34,9 +40,35 @@ class UserController extends Controller
                 "content"=>"通知消息"
             ],
         ];
+        /*
+         * 服务
+         */
+        $serve=[
+            [
+                "url"=>"/pages/logs/logs",
+                "images"=>"../../images/home_car_source@2x.png",
+                "content"=>"车源管理"
+            ],
+            [
+                "url"=>"/pages/logs/logs",
+                "images"=>"../../images/home_logistical@2x.png",
+                "content"=>"物流管理"
+            ],
+            [
+                "url"=>"/pages/logs/logs",
+                "images"=>"../../images/home_finance@2x.png",
+                "content"=>"车商金融"
+            ],
+            [
+                "url"=>"/pages/logs/logs",
+                "images"=>"../../images/home_headlines@2x.png",
+                "content"=>"车市头条"
+            ],
+        ];
        $info=[
            'data'=>$data,
-           'arr' =>$arr
+           'arr' =>$arr,
+           'serve'=>$serve
 
        ];
         return $info;
