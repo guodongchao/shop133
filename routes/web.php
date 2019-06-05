@@ -38,6 +38,7 @@ Route::post('/apilogin','User\UserController@apilogins'); //登录页面
 
 //=========================================================================================================
 Route::any('/dome', 'Weixin\UserController@dome');//登录页面
+Route::any('/dome2', 'Weixin\UserController@dome2');//登录页面
 
 
 
